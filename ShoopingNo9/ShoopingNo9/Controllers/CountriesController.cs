@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShoopingNo9.Data;
 using ShoopingNo9.Data.Entities;
@@ -6,8 +7,9 @@ using ShoopingNo9.Models;
 
 namespace ShoopingNo9.Controllers
 {
-    public class CountriesController : Controller
-    {
+     [Authorize(Roles = "Admin")]
+       public class CountriesController : Controller
+       {
         private readonly DataContext _context;
 
         public CountriesController(DataContext context)
