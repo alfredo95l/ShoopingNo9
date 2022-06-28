@@ -27,13 +27,13 @@ namespace ShoopingNo9.Data
         }
 
         private async Task<User> CheckUserAsync(
- string document,
- string firstName,
- string lastName,
- string email,
- string phone,
- string address,
- UserType userType)
+             string document,
+             string firstName,
+             string lastName,
+             string email,
+             string phone,
+             string address,
+                UserType userType)
         {
             User user = await _userHelper.GetUserAsync(email);
             if (user == null)
