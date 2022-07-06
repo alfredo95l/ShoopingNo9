@@ -32,7 +32,7 @@ namespace ShoopingNo9.Models
         [Display(Name = "Foto")]
         public string ImageFullPath => ImageId == Guid.Empty
         ? $"https://localhost:7126/images/noimage.png"
-        : $"https://shoppinguno.blob.core.windows.net/users/{ImageId}";
+        : $"https://shoppingdos.blob.core.windows.net/users/{ImageId}";
 
         [Display(Name = "Image")]
         public IFormFile ImageFile { get; set; }
